@@ -31,7 +31,7 @@ namespace AuditSeverityModule.Repository
             {
                 
                 List<AuditBenchmark> listFromAuditBenchmark = new List<AuditBenchmark>();
-                HttpResponseMessage response = client.GetAsync("https://localhost:44397/api" + "/AuditBenchmark").Result; //client.BaseAddress
+                HttpResponseMessage response = client.GetAsync("http://52.224.72.75/api" + "/AuditBenchmark").Result; //client.BaseAddress
                 if (response.IsSuccessStatusCode)
                 {
                     string data = response.Content.ReadAsStringAsync().Result;
